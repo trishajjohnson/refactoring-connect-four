@@ -175,7 +175,7 @@ class Game {
     const top = document.createElement('tr');
     top.setAttribute('id', 'column-top');
     // console.log(this);
-    this.handleGameCLick = this.handleClick.bind(this);
+    this.handleGameClick = this.handleClick.bind(this);
     top.addEventListener('click', this.handleGameClick);
   
     for (let x = 0; x < this.WIDTH; x++) {
@@ -299,7 +299,7 @@ class Player {
 const startGameBtn = document.getElementById('startGame');
 startGameBtn.addEventListener('click', () => {
   let p1 = new Player(document.getElementById('p1-color').value);
-  let p2 = document.getElementById('p2-color').value;
+  let p2 = new Player(document.getElementById('p2-color').value);
   new Game(p1, p2);
 
 });
